@@ -539,34 +539,38 @@ footer {
   background-color: rgba(255, 255, 255, 0.08) !important; /* gris très léger */
 }
 
+.fc-timegrid-slot-all-day,
+.fc-timegrid-axis-all-day,
+.fc-timegrid-all-day,
+.fc-timegrid-all-day-events,
+tr.fc-timegrid-row.fc-timegrid-all-day {
+  display: none !important;
+  height: 0 !important;
+  visibility: hidden !important;
+}
+
+
+
+/* Fix responsive FullCalendar en vue "Jour" */
 @media screen and (max-width: 768px) {
   .calendar-container {
-    margin: 1rem auto;
-    padding: 1rem;
+    width: 100%;
     overflow-x: auto;
+    padding: 0;
+    height: 550px;
   }
 
   .fc {
-    font-size: 0.8rem;
+
+    box-sizing: border-box;
   }
 
   .fc .fc-toolbar-title {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }
 
   .fc .fc-button {
-    font-size: 0.75rem;
-    padding: 0.2rem 0.5rem;
-  }
-
-  .fc .fc-daygrid-day-number,
-  .fc .fc-timegrid-slot-label {
-    font-size: 0.75rem;
-  }
-
-  /* Pour permettre le scroll horizontal s’il y a besoin */
-  #calendar-a,
-  #calendar-b {
-    min-width: 600px;
+    font-size: 0.9rem;
+    padding: 0.4rem 0.6rem;
   }
 }
