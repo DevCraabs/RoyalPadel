@@ -44,8 +44,8 @@
 <section class="section">
   <h2>Agendas des créneaux disponibles</h2>
   <div class="legend">
-    <div><span class="legend-box" style="background-color:#A5D6A7;"></span> Libre</div>
-    <div><span class="legend-box" style="background-color:#EF9A9A;"></span> Réservé</div>
+    <div><span class="legend-box" style="background-color:#639e65;"></span> Libre</div>
+    <div><span class="legend-box" style="background-color:#965050;"></span> Réservé</div>
   </div>
 
   <h3>Terrain A</h3>
@@ -77,11 +77,11 @@
         },
         eventDidMount: function(info) {
           if (info.event.title.toLowerCase().includes("libre")) {
-            info.el.style.backgroundColor = "#A5D6A7"; // vert doux
-            info.el.style.borderColor = "#A5D6A7";
+            info.el.style.backgroundColor = "#639e65"; // vert doux
+            info.el.style.borderColor = "#639e65";
           } else {
-            info.el.style.backgroundColor = "#EF9A9A"; // rouge doux
-            info.el.style.borderColor = "#EF9A9A";
+            info.el.style.backgroundColor = "#965050"; // rouge doux
+            info.el.style.borderColor = "#965050";
           }
 
         }
@@ -108,11 +108,11 @@
         },
         eventDidMount: function(info) {
           if (info.event.title.toLowerCase().includes("libre")) {
-            info.el.style.backgroundColor = "#A5D6A7"; // vert doux
-            info.el.style.borderColor = "#A5D6A7";
+            info.el.style.backgroundColor = "#639e65"; // vert doux
+            info.el.style.borderColor = "#639e65";
           } else {
-            info.el.style.backgroundColor = "#EF9A9A"; // rouge doux
-            info.el.style.borderColor = "#EF9A9A";
+            info.el.style.backgroundColor = "#965050"; // rouge doux
+            info.el.style.borderColor = "#965050";
           }
         }
       });
