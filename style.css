@@ -538,3 +538,35 @@ footer {
 .fc .fc-day-today {
   background-color: rgba(255, 255, 255, 0.08) !important; /* gris très léger */
 }
+
+@media screen and (max-width: 768px) {
+  .calendar-container {
+    margin: 1rem auto;
+    padding: 1rem;
+    overflow-x: auto;
+  }
+
+  .fc {
+    font-size: 0.8rem;
+  }
+
+  .fc .fc-toolbar-title {
+    font-size: 1.1rem;
+  }
+
+  .fc .fc-button {
+    font-size: 0.75rem;
+    padding: 0.2rem 0.5rem;
+  }
+
+  .fc .fc-daygrid-day-number,
+  .fc .fc-timegrid-slot-label {
+    font-size: 0.75rem;
+  }
+
+  /* Pour permettre le scroll horizontal s’il y a besoin */
+  #calendar-a,
+  #calendar-b {
+    min-width: 600px;
+  }
+}
