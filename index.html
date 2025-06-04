@@ -67,11 +67,10 @@
           day: 'Jour',
           list: 'Liste'
         },
-        headerToolbar: {
-          left: 'prev,next today',
-          center: 'title',
-          right: 'timeGridWeek,timeGridDay'
-        },
+        headerToolbar: window.innerWidth < 768
+        ? { left: 'prev,next today', center: 'title', right: 'timeGridDay' }
+        : { left: 'prev,next today', center: 'title', right: 'timeGridWeek,timeGridDay'
+         },
         googleCalendarApiKey: 'AIzaSyBIST_GrSX8LD--6cUsLq5Jt25pqiM1I9Q',
         events: {
           googleCalendarId: '1891e45bd3888f71e3f9922860b97a832422677cef073eccc1ba8a2068aa734e@group.calendar.google.com'
@@ -99,11 +98,10 @@
           day: 'Jour',
           list: 'Liste'
         },
-        headerToolbar: {
-          left: 'prev,next today',
-          center: 'title',
-          right: 'timeGridWeek,timeGridDay'
-        },
+        headerToolbar: window.innerWidth < 768
+        ? { left: 'prev,next today', center: 'title', right: 'timeGridDay' }
+        : { left: 'prev,next today', center: 'title', right: 'timeGridWeek,timeGridDay'
+         },
         googleCalendarApiKey: 'AIzaSyBIST_GrSX8LD--6cUsLq5Jt25pqiM1I9Q',
         events: {
           googleCalendarId: '59735bf1b3f3c86b417442a9d2da123c1a2f62ab4c508a33f0ad05c4fab6237c@group.calendar.google.com'
@@ -175,7 +173,7 @@
   </section>
   <!-- FOOTER -->
   <footer>
-    © 2025 Paddle du Soleil — Tous droits réservés
+    © 2025 Royal Padel — Tous droits réservés
   </footer>
 
   <script src="script.js"></script>
