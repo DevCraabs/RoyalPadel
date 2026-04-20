@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -13,10 +12,6 @@
   <meta property="og:image" content="https://royalpadel.net/Terrain-padel-1000-x-1000.png">
   <meta property="og:url" content="https://royalpadel.net">
   <link href="style.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/google-calendar@6.1.8/index.global.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/locales/fr.global.min.js"></script>
 </head>
 <body>
   <!-- HEADER -->
@@ -41,98 +36,22 @@
     </p>
   </section>
 
-<!-- SECTION CALENDRIERS -->
-<section class="section">
-  <h2>Agendas des créneaux disponibles</h2>
-  <div class="legend">
-    <div><span class="legend-box" style="background-color:#639e65;"></span> Libre</div>
-    <div><span class="legend-box" style="background-color:#965050;"></span> Réservé</div>
-  </div>
+  <!-- SECTION RÉSERVATION -->
+  <section class="section">
+    <h2>Réservez votre créneau en ligne</h2>
+    <p>
+      Consultez les disponibilités et réservez directement votre terrain via notre agenda en ligne.
+    </p>
 
-  <h3>Terrain A</h3>
-  <div id="calendar-a" class="calendar-container"></div>
-
-  <h3>Terrain B</h3>
-  <div id="calendar-b" class="calendar-container"></div>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const calendarA = new FullCalendar.Calendar(document.getElementById('calendar-a'), {
-        initialView: window.innerWidth < 768 ? 'timeGridDay' : 'timeGridWeek',
-        timeZone: 'Europe/Paris',
-        locale: 'fr',
-        allDaySlot: false,
-        buttonText: {
-          today: 'Aujourd’hui',
-          week: 'Semaine',
-          day: 'Jour',
-          list: 'Liste'
-        },
-        headerToolbar: window.innerWidth < 768
-        ? { left: 'prev,next today', center: 'title', right: 'timeGridDay' }
-        : { left: 'prev,next today', center: 'title', right: 'timeGridWeek,timeGridDay'
-         },
-        googleCalendarApiKey: 'AIzaSyBIST_GrSX8LD--6cUsLq5Jt25pqiM1I9Q',
-        events: {
-          googleCalendarId: '1891e45bd3888f71e3f9922860b97a832422677cef073eccc1ba8a2068aa734e@group.calendar.google.com'
-        },
-        eventDidMount: function(info) {
-          if (info.event.title.toLowerCase().includes("libre")) {
-            info.el.style.backgroundColor = "#639e65"; // vert doux
-            info.el.style.borderColor = "#639e65";
-          } else {
-            info.el.style.backgroundColor = "#965050"; // rouge doux
-            info.el.style.borderColor = "#965050";
-          }
-
-        }
-      });
-
-      const calendarB = new FullCalendar.Calendar(document.getElementById('calendar-b'), {
-        initialView: window.innerWidth < 768 ? 'timeGridDay' : 'timeGridWeek',
-        timeZone: 'Europe/Paris',
-        locale: 'fr',
-        allDaySlot: false,
-        buttonText: {
-          today: 'Aujourd’hui',
-          week: 'Semaine',
-          day: 'Jour',
-          list: 'Liste'
-        },
-        headerToolbar: window.innerWidth < 768
-        ? { left: 'prev,next today', center: 'title', right: 'timeGridDay' }
-        : { left: 'prev,next today', center: 'title', right: 'timeGridWeek,timeGridDay'
-         },
-        googleCalendarApiKey: 'AIzaSyBIST_GrSX8LD--6cUsLq5Jt25pqiM1I9Q',
-        events: {
-          googleCalendarId: '59735bf1b3f3c86b417442a9d2da123c1a2f62ab4c508a33f0ad05c4fab6237c@group.calendar.google.com'
-        },
-        eventDidMount: function(info) {
-          if (info.event.title.toLowerCase().includes("libre")) {
-            info.el.style.backgroundColor = "#639e65"; // vert doux
-            info.el.style.borderColor = "#639e65";
-          } else {
-            info.el.style.backgroundColor = "#965050"; // rouge doux
-            info.el.style.borderColor = "#965050";
-          }
-        }
-      });
-
-      calendarA.render();
-      calendarB.render();
-      // Masquer la ligne "all-day" par JavaScript
-      setTimeout(() => {
-        document.querySelectorAll(
-          '.fc-timegrid-slot-all-day, .fc-timegrid-axis-all-day, .fc-timegrid-all-day, .fc-timegrid-all-day-events, tr.fc-timegrid-row.fc-timegrid-all-day'
-        ).forEach(el => {
-          el.style.display = 'none';
-        });
-      }, 300);
-    });
-  </script>
-</section>
-
-
+    <div class="booking-container">
+      <iframe
+        src="https://royal-padel.mysportset.com/"
+        title="Agenda de réservation Royal Padel"
+        loading="lazy"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </section>
 
   <!-- SECTION CONTACT -->
   <section class="section-contact">
@@ -169,9 +88,8 @@
       referrerpolicy="no-referrer-when-downgrade"
       title="Carte PRoyal Padel Pont Royal">
     </iframe>
-
-
   </section>
+
   <!-- FOOTER -->
   <footer>
     © 2025 Royal Padel — Tous droits réservés
